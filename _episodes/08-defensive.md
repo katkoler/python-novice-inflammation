@@ -179,11 +179,11 @@ AssertionError                            Traceback (most recent call last)
 ----> 1 print(normalize_rectangle( (4.0, 2.0, 1.0, 5.0) )) # X axis inverted
 
 <ipython-input-20-408dc39f3915> in normalize_rectangle(rect)
-      3     assert len(rect) == 4, 'Rectangles must contain 4 coordinates'
-      4     x0, y0, x1, y1 = rect
-----> 5     assert x0 < x1, 'Invalid X coordinates'
-      6     assert y0 < y1, 'Invalid Y coordinates'
-      7
+      6     assert len(rect) == 4, 'Rectangles must contain 4 coordinates'
+      7     x0, y0, x1, y1 = rect
+----> 8     assert x0 < x1, 'Invalid X coordinates'
+      9     assert y0 < y1, 'Invalid Y coordinates'
+     10 
 
 AssertionError: Invalid X coordinates
 ~~~
@@ -219,11 +219,11 @@ AssertionError                            Traceback (most recent call last)
 ----> 1 print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0) ))
 
 <ipython-input-20-408dc39f3915> in normalize_rectangle(rect)
-     16
-     17     assert 0 < upper_x <= 1.0, 'Calculated upper X coordinate invalid'
----> 18     assert 0 < upper_y <= 1.0, 'Calculated upper Y coordinate invalid'
-     19
-     20     return (0, 0, upper_x, upper_y)
+     19 
+     20     assert 0 < upper_x <= 1.0, 'Calculated upper X coordinate invalid'
+---> 21     assert 0 < upper_y <= 1.0, 'Calculated upper Y coordinate invalid'
+     22 
+     23     return (0, 0, upper_x, upper_y)
 
 AssertionError: Calculated upper Y coordinate invalid
 ~~~
